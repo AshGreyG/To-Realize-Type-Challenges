@@ -4,6 +4,10 @@ type GetPick<T, K extends keyof T> = {
   [P in keyof T as P extends K ? P : never]: T[P]
 }
 
+type GetPickSimpler<T, K extends keyof T> = {
+  [P in K]: T[P];
+}
+
 interface Todo {
   title: string;
   description: string;
