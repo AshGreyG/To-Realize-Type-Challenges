@@ -1,5 +1,5 @@
 <p align='center'>
-  <img src='./screenshots/logo.svg' width='400'/>
+  <img src='https://github.com/type-challenges/type-challenges/blob/main/screenshots/logo.svg' width='400'/>
 </p>
 
 <p align='center'>Collection of TypeScript type challenges</p>
