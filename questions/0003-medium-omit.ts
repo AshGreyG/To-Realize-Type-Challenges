@@ -4,14 +4,14 @@ type GetOmit<T, K extends keyof T> = {
   [P in keyof T as P extends K ? never : P]: T[P]
 }
 
-interface Todo {
+interface Todo3 {
   title: string;
   description: string;
   completed: boolean;
 }
 
-type TodoPreview = GetOmit<Todo, "description" | "title">;
+type TodoPreview3 = GetOmit<Todo3, "description" | "title">;
 
-const todo: TodoPreview = {
+const todo: TodoPreview3 = {
   completed: false
 }

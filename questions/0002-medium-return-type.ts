@@ -9,4 +9,4 @@ const fn = (v: boolean) => {
   return v ? 1 : 2;
 }
 
-type Res = GetReturnType<typeof fn>;  // 1 | 2
+type Res2 = GetReturnType<typeof fn>;  // 1 | 2
