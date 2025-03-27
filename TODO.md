@@ -17,5 +17,8 @@
         two types. That's one of the strangest thing in TypeScript type system.
   + [ ] Figure out why we can't use `Pick<Readonly<T>, P>`, but to use
         `Readonly<Pick<T>, P>`. I guess it may be related to the fact that TypeScript
-        compiler first check the **assignability** between `Func<T>` and 
+        compiler first check the **assignability** of `T` and `S` between `Func<T>` and 
         `Func<S>`.
++ [0009-medium-deep-readonly](./questions/0009-medium-deep-readonly.ts)
+  + [ ] Why `{ a: string; } | { b: number; } extends object` is true? How does TypeScript's
+        type system treat the union type?
