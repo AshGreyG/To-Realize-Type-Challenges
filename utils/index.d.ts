@@ -15,7 +15,9 @@ export type NotAny<T> = true extends IsAny<T> ? false : true;
 export type Debug<T> = { [K in keyof T]: T[K] };
 export type MergeInsertions<T> 
   = T extends object
-    ? { [K in keyof T]: MergeInsertions<T[K]> }
+    ? T extends (...params: any[]) => any
+      ? T
+      : { [K in keyof T]: MergeInsertions<T[K]> }
     : T;
 
 export type Alike<X, Y> = Equal<MergeInsertions<X>, MergeInsertions<Y>>;
