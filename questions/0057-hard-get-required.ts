@@ -32,7 +32,7 @@ type GetRequired2<T extends {}> = {
   ]: Required<T>[P]
 }
 
-// 🩷 Oh year, I got it !
+// 🩷 Oh yeah, I got it ! Huaier says it's complicated, can I simplify it?
 
 type Res5721 = GetRequired2<{ foo: number, bar?: string }>;       // 🟩
 type Res5722 = GetRequired2<{ foo: undefined, bar?: undefined }>; // 🟩
