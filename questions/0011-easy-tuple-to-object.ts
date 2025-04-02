@@ -1,5 +1,7 @@
 // #easy #object-keys
 
+import type { TupleToUnion3 } from "./0010-medium-tuple-to-union.ts";
+
 type TupleToObject<T extends ReadonlyArray<any>> = {
   [K in TupleToUnion3<T>]: K;
 }

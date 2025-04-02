@@ -48,3 +48,5 @@ type GetRequired3<T> = {
 
 type Res5731 = GetRequired2<{ foo: number, bar?: string }>;       // 🟩
 type Res5732 = GetRequired2<{ foo: undefined, bar?: undefined }>; // 🟩
+
+export type { GetRequired3 };

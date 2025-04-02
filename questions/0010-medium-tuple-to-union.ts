@@ -45,3 +45,5 @@ type TupleToUnion3<T> = T extends ReadonlyArray<unknown> ? T[number] : never;
 type Res1031 = TupleToUnion3<Arr101>;         // 🟩
 type Res1032 = TupleToUnion3<typeof arr102>;  // 🟩
 type Res1033 = TupleToUnion3<typeof arr103>;  // 🟩
+
+export type { TupleToUnion3 };
