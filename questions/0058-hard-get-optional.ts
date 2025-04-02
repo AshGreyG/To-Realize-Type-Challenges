@@ -6,3 +6,5 @@ type GetOptional<T> = {
 
 type Res581 = GetOptional<{ foo: number, bar?: string }>;       // 🟩
 type Res582 = GetOptional<{ foo: undefined, bar?: undefined }>; // 🟩
+
+export type { GetOptional };
