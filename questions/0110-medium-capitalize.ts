@@ -47,6 +47,19 @@ type ConvertUpperToLower<T extends UppercaseLetters>
     never;
 
 type GetCapitalize<T extends string>
-  = T extends `${infer F extends LowercaseLetters}${infer Rest}`
-    ? `${ConvertLowerToUpper<F>}${Rest}`
+  = T extends `${infer F}${infer Rest}`
+    ? F extends LowercaseLetters
+      ? `${ConvertLowerToUpper<F>}${Rest}`
+      : T
     : T;
+
+type Res1101 = GetCapitalize<"bsd bsd">;  // 🟩
+type Res1102 = GetCapitalize<"ABS, abs">; // 🟩
+
+export type {
+  LowercaseLetters,
+  UppercaseLetters,
+  ConvertLowerToUpper,
+  ConvertUpperToLower,
+  GetCapitalize
+};

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 LOWERCASE_LETTERS="abcdefghijklmnopqrstuvwxyz"
 UPPERCASE_LETTERS="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
