@@ -8,3 +8,5 @@ type TrimLeft<T extends string>
 type Res1061 = TrimLeft<"   19">;         // 🟩
 type Res1062 = TrimLeft<" \n  19   \t">;  // 🟩
 type Res1063 = TrimLeft<" \t  19   \t">;  // 🟩
+
+export type { TrimLeft };
