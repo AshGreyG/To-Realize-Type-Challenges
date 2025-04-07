@@ -16,4 +16,3 @@ type Res1163 = Replace<"foobarbar", "", "foo">;     // 🟩
 type Res1164 = Replace<"foobarbar", "bar", "">;     // 🟩
 type Res1165 = Replace<"foobarbar", "bra", "foo">;  // 🟩
 type Res1166 = Replace<"", "", "">;                 // 🟩
-
