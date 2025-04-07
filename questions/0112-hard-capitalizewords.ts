@@ -23,8 +23,8 @@ type CapitalizeWordsIgnoreFirst<T extends string>
 type CapitalizeWords<T extends string> = GetCapitalize<CapitalizeWordsIgnoreFirst<T>>;
 
 type Res11201 = CapitalizeWords<"abc de">;                                               // 🟩
-type Res11202 = CapitalizeWords<"aa!bb@cc#dd$ee%ff^gg&hh*ii(jj)kk_ll+mm{nn}oo|pp🤣qq">;  // 🟥
-type Res11203 = CapitalizeWords<"abb||as">;                                              // 🟥
+type Res11202 = CapitalizeWords<"aa!bb@cc#dd$ee%ff^gg&hh*ii(jj)kk_ll+mm{nn}oo|pp🤣qq">;  // 🟩
+type Res11203 = CapitalizeWords<"abb||as">;                                              // 🟩
 
 // 😢 This is a 'bug' of TypeScript
 // 🎉 Actually the problem is my `CapitalWordsIgnoreFirst` cannot deal with continuous
