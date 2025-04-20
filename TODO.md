@@ -25,3 +25,5 @@
 + [0009-medium-deep-readonly](./questions/0009-medium-deep-readonly.ts)
   + [ ] Why `{ a: string; } | { b: number; } extends object` is true? How does TypeScript's
         type system treat the union type?
++ [0189-easy-awaited]
+  + [ ] Figure out `Promise` and `Awaited` types.
