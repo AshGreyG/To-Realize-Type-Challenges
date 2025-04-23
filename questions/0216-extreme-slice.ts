@@ -151,3 +151,18 @@ type Slice<
     : Integer.Minus<T["length"], E> extends number
       ? DropStart<DropEnd<T, Integer.Minus<T["length"], E>>, S>
       : never;
+
+type Arr216 = [1, 2, 3, 4, 5];
+
+type Res21601 = Slice<Arr216, 0, 1>;    // 🟩
+type Res21602 = Slice<Arr216, 0, 0>;    // 🟩
+type Res21603 = Slice<Arr216, 2, 4>;    // 🟩
+type Res21604 = Slice<[]>;              // 🟩
+type Res21605 = Slice<Arr216>;          // 🟩
+type Res21606 = Slice<Arr216, 0>;       // 🟩
+type Res21607 = Slice<Arr216, 2>;       // 🟩
+type Res21608 = Slice<Arr216, 0, -1>;   // 🟩
+type Res21609 = Slice<Arr216, -3, -1>;  // 🟩
+type Res21610 = Slice<Arr216, 10>;      // 🟩
+type Res21611 = Slice<Arr216, 1, 0>;    // 🟩
+type Res21612 = Slice<Arr216, 10, 20>;  // 🟩
